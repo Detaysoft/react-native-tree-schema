@@ -1,0 +1,47 @@
+{
+  "name": "react-native-tree-view",
+  "version": "1.0.0",
+  "description": "React Natie için yazılmış ağaç yapısı",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kubraturan/react-native-tree-view.git"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react native",
+    "mobile",
+    "ios",
+    "android",
+    "tree",
+    "tree-view",
+    "tree-list"
+  ],
+  "author": "Kübra TURAN , Aydın Emre ESEN",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kubraturan/react-native-tree-view/issues"
+  },
+  "homepage": "https://github.com/kubraturan/react-native-tree-view#readme",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "16.8.3",
+    "react-native": "0.59.9",
+    "react-native-elements": "^1.1.0",
+    "react-native-vector-icons": "^6.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0",
+    "metro-react-native-babel-preset": "^0.54.1",
+    "react-test-renderer": "16.8.3"
+  }
+}
