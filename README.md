@@ -21,7 +21,7 @@ import React from 'react';
 import { View } from 'react-native';
 
 import { Icon } from 'react-native-elements';
-import { Root } from 'react-native-tree-view';
+import { Root } from 'react-native-tree-schema';
 
 class App extends React.Component {
 
