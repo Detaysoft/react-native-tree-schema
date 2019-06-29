@@ -134,16 +134,16 @@ class Node extends React.Component {
   render() {
     return (
       <View>
-        <View style={styles.nodeItem}>
-          <TouchableOpacity onPress={this.toggleOpen}>
+        <TouchableOpacity onPress={this.toggleOpen} onLongPress={this.onLongPress}>
+          <View style={styles.nodeItem}>
             <View style={styles.nodeIcon}>
               {this.getIcon()}
             </View>
-          </TouchableOpacity>
-          <TouchableOpacity onLongPress = {this.onLongPress}>
-            <Text style={styles.nodeText}>{this.state.node.name}</Text>
-          </TouchableOpacity>
-        </View>
+            <Text style={styles.nodeText}>
+              {this.state.node.name}
+            </Text>
+          </View>
+        </TouchableOpacity>
         {
           this.state.node.childNodes && this.state.node.opened && (
           <Branch
