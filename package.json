@@ -1,5 +1,5 @@
 {
-  "name": "react-native-tree-view",
+  "name": "react-native-tree-schema",
   "version": "1.0.0",
   "description": "React Natie için yazılmış ağaç yapısı",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kubraturan/react-native-tree-view.git"
+    "url": "git+https://github.com/kubraturan/react-native-tree-schema.git"
   },
   "keywords": [
     "react-native",
@@ -26,9 +26,9 @@
   "author": "Kübra TURAN , Aydın Emre ESEN",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kubraturan/react-native-tree-view/issues"
+    "url": "https://github.com/kubraturan/react-native-tree-schema/issues"
   },
-  "homepage": "https://github.com/kubraturan/react-native-tree-view#readme",
+  "homepage": "https://github.com/kubraturan/react-native-tree-schema#readme",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "16.8.3",
