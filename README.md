@@ -1,5 +1,5 @@
 # react-native-tree-schema
-Tree component for React.js apps.
+Tree component for React Native apps.
 
 ![native-tree](https://user-images.githubusercontent.com/30048977/60381527-dacd4600-9a5e-11e9-8305-69bbd305c5e7.gif)
 # Install
@@ -17,33 +17,74 @@ npm install react-native-tree-schema
 ## Root Component
 
 ```javascript
-import React from 'react'
-import Root from 'react-tree-schema'
+import React from 'react';
+import { View } from 'react-native';
 
-const Tree = () => (
-  <Root childNodes={[
-    { 
-      name: 'React Team',
-      opened: true ,
-      childNodes: [
-        { 
-          name: 'Team Leader', 
-          childNodes: [
-            { name: 'Abdurrahman EKER' },
-          ]
-        },
-        {
-          name: 'Developers', 
-          childNodes: [
-            { name: 'Kübra TURAN' },
-            { name: 'Reyhan ÜNAL' },
-            { name: 'Osman PEKAYDIN' },
-          ]
-        },
-      ]
-    }
-  ]}/>
-)
+import { Icon } from 'react-native-elements';
+import { Root } from 'react-native-tree-view';
+
+class App extends React.Component {
+
+  Icon(color= 'red') {
+    return (
+      <Icon
+        color={color}
+        name='person'/>
+    )
+  }
+  render() {
+    return (
+      <View>
+        <Root childNodes={[
+          { 
+            name: 'React Team',
+            opened: true ,
+            childNodes: [
+              { 
+                name: 'Team Leader', 
+                icon: this.Icon('#c3352c'),
+                onLongPress: () => {console.log("React is wonderful :) ")},
+                childNodes: [
+                  { name: 'Abdurrahman EKER',
+                    icon: this.Icon('#45a5c9'), 
+                  },
+                ]
+              },
+              {
+                name: 'Developers', 
+                icon: this.Icon('#f8bc40'),
+                childNodes: [
+                  { 
+                    name: 'Kübra TURAN' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  { 
+                    name: 'Reyhan ÜNAL' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  { 
+                    name: 'Hamza Kürşat ŞİMŞEK' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  { 
+                    name: 'Osman PEKAYDIN' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  { 
+                    name: 'Aydın Emre ESEN(Yardımcı Talebe:))' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                ]
+              },
+            ]
+          }
+        ]}/>
+      </View>
+    )
+  }
+}
+
+export default App;
 ```
 #### Root props
 | prop | default | type | description |
