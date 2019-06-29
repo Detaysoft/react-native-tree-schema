@@ -1,49 +1,68 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
+import React from 'react';
+import { View } from 'react-native';
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import { Icon } from 'react-native-elements';
+import { Root } from 'react-native-tree-view';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
+class App extends React.Component {
 
-type Props = {};
-export default class App extends Component<Props> {
+  Icon(color= 'red') {
+    return (
+      <Icon
+        color={color}
+        name='person'/>
+    )
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View>
+        <Root childNodes={[
+          {
+            name: 'React Team',
+            opened: true ,
+            childNodes: [
+              {
+                name: 'Team Leader',
+                icon: this.Icon('#c3352c'),
+                onLongPress: () => {console.log("nabıyon yaa")},
+                childNodes: [
+                  { name: 'Abdurrahman EKER',
+                    icon: this.Icon('#45a5c9'),
+                  },
+                ]
+              },
+              {
+                name: 'Developers',
+                icon: this.Icon('#f8bc40'),
+                childNodes: [
+                  {
+                    name: 'Kübra TURAN' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  {
+                    name: 'Reyhan ÜNAL' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  {
+                    name: 'Hamza Kürşat ŞİMŞEK' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  {
+                    name: 'Osman PEKAYDIN' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                  {
+                    name: 'Aydın Emre ESEN(Yardımcı Talebe:))' ,
+                    icon: this.Icon('#45a5c9'),
+                  },
+                ]
+              },
+            ]
+          }
+        ]}/>
       </View>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+export default App;

@@ -9,6 +9,7 @@
   "dependencies": {
     "react": "16.8.3",
     "react-native": "0.59.9",
+    "react-native-tree-schema": "/home/cengkbra/denemee/react-native-tree-view",
     "react-native-tree-view": "file:.."
   },
   "devDependencies": {
